@@ -1,0 +1,20 @@
+{
+  "name": "ts-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node ./build/index.js"
+  },
+  "author": "Tucker Sneed",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.6.0"
+  }
+}

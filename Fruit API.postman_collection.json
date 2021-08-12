@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "5ed61dc7-34f6-43a7-96fa-4c0e3a33ccb2",
+		"name": "Fruit API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping (Debugging)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "this_isnt_a_real_application",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URL}}/ping",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get fruit by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "this_isnt_a_real_application",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URL}}/fruit/2",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"fruit",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make smoothie!",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "this_isnt_a_real_application",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fruits\": [\r\n        \"orange\",\r\n        \"orange\",\r\n        \"blueberry\",\r\n        \"tomato\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/makeSmoothie",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"makeSmoothie"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://127.0.0.1:8080"
+		}
+	]
+}
